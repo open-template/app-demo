@@ -18,14 +18,14 @@ mat.$theme-ignore-duplication-warnings: true;
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$angular-app-primary: mat.define-palette(mat.$indigo-palette, 500);
-$angular-app-accent: mat.define-palette(mat.$light-blue-palette);
+$app-demo-primary: mat.define-palette(mat.$indigo-palette, 500);
+$app-demo-accent: mat.define-palette(mat.$light-blue-palette);
 // The warn palette is optional (defaults to red).
-$angular-app-warn: mat.define-palette(mat.$red-palette);
-$angular-app-success: mat.define-palette(mat.$green-palette);
+$app-demo-warn: mat.define-palette(mat.$red-palette);
+$app-demo-success: mat.define-palette(mat.$green-palette);
 
 
-@mixin angular-app-theme($theme, $colors) {
+@mixin app-demo-theme($theme, $colors) {
   $foreground-palette: map.get($theme, foreground);
   $background-palette: map.get($theme, background);
   $background: theming.mat-color($background-palette, background);
@@ -59,14 +59,14 @@ $angular-app-success: mat.define-palette(mat.$green-palette);
 }
 
 $colors-light: (
-  primary: $angular-app-primary,
-  accent: $angular-app-accent,
-  warn: $angular-app-warn,
+  primary: $app-demo-primary,
+  accent: $app-demo-accent,
+  warn: $app-demo-warn,
   indicator-success: #008000,
   indicator-warning: #ffad20
 );
 $colors-dark: (
-  primary: $angular-app-primary,
+  primary: $app-demo-primary,
   accent: mat.define-palette(mat.$blue-grey-palette),
   indicator-success: #008000,
   indicator-warning: #ffad20
@@ -76,11 +76,11 @@ $colors-dark: (
 // theming systems such as "color" or "typography".
 // light theme
 
-$angular-app-light-theme: mat.define-light-theme((
+$app-demo-light-theme: mat.define-light-theme((
   color: $colors-light,
 ));
 // dark theme
-$angular-app-dark-theme: mat.define-dark-theme((
+$app-demo-dark-theme: mat.define-dark-theme((
   color: $colors-dark
 ));
 
@@ -90,20 +90,20 @@ $angular-app-dark-theme: mat.define-dark-theme((
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 
-.angular-app-dark-theme {
-  @include mat.core-theme($angular-app-dark-theme);
-  @include mat.all-component-colors($angular-app-dark-theme);
- // @include mat.button-theme($angular-app-dark-theme);
-  @include mat.sidenav-theme($angular-app-dark-theme);
-  @include angular-app-theme($angular-app-dark-theme, $colors-dark);
+.app-demo-dark-theme {
+  @include mat.core-theme($app-demo-dark-theme);
+  @include mat.all-component-colors($app-demo-dark-theme);
+ // @include mat.button-theme($app-demo-dark-theme);
+  @include mat.sidenav-theme($app-demo-dark-theme);
+  @include app-demo-theme($app-demo-dark-theme, $colors-dark);
 }
 
-.angular-app-light-theme {
-  @include mat.core-theme($angular-app-light-theme);
-  @include mat.all-component-colors($angular-app-light-theme);
-  // @include mat.button-theme($angular-app-light-theme);
-  @include mat.sidenav-theme($angular-app-light-theme);
-  @include angular-app-theme($angular-app-light-theme, $colors-light);
+.app-demo-light-theme {
+  @include mat.core-theme($app-demo-light-theme);
+  @include mat.all-component-colors($app-demo-light-theme);
+  // @include mat.button-theme($app-demo-light-theme);
+  @include mat.sidenav-theme($app-demo-light-theme);
+  @include app-demo-theme($app-demo-light-theme, $colors-light);
 }
 
 

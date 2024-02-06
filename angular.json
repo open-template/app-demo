@@ -11,7 +11,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "angular-app": {
+    "app-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -92,13 +92,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-app:build:production"
+              "browserTarget": "app-demo:build:production"
             },
             "qa": {
-              "browserTarget": "angular-app:build:qa"
+              "browserTarget": "app-demo:build:qa"
             },
             "development": {
-              "browserTarget": "angular-app:build:development"
+              "browserTarget": "app-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -116,24 +116,24 @@
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "angular-app:serve"
+            "devServerTarget": "app-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-app:serve:production"
+              "devServerTarget": "app-demo:serve:production"
             }
           }
         },
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "angular-app:serve",
+            "devServerTarget": "app-demo:serve",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-app:serve:production"
+              "devServerTarget": "app-demo:serve:production"
             }
           }
         },
@@ -156,14 +156,14 @@
         "ct": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "angular-app:serve",
+            "devServerTarget": "app-demo:serve",
             "watch": true,
             "headless": false,
             "testingType": "component"
           },
           "configurations": {
             "development": {
-              "devServerTarget": "angular-app:serve:development"
+              "devServerTarget": "app-demo:serve:development"
             }
           }
         }

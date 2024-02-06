@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
       this.store.select("theme").subscribe(newThemeValue => {
-          newThemeValue.isDark ? this.applyOverlayContainerTheme('angular-app-light-theme', newThemeValue.name) :
-              this.applyOverlayContainerTheme('angular-app-dark-theme', newThemeValue.name);
+          newThemeValue.isDark ? this.applyOverlayContainerTheme('app-demo-light-theme', newThemeValue.name) :
+              this.applyOverlayContainerTheme('app-demo-dark-theme', newThemeValue.name);
       })
   }
 

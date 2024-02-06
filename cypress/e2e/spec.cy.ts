@@ -1,6 +1,6 @@
 describe('My First Test', () => {
   it('Visits the initial project page', () => {
     cy.visit('/')
-    cy.contains('angular-app Demo')
+    cy.contains('app-demo Demo')
   })
 })

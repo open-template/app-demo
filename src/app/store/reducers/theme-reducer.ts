@@ -16,8 +16,8 @@ export class UpdateTheme implements Action {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const THEMES : TTheme[] = [
-  {name: 'angular-app-light-theme', displayName: 'Light', isDark: false},
-  {name: 'angular-app-dark-theme', displayName: 'Dark', isDark: true},
+  {name: 'app-demo-light-theme', displayName: 'Light', isDark: false},
+  {name: 'app-demo-dark-theme', displayName: 'Dark', isDark: true},
 ];
 
 export function themeReducer(state: TTheme = THEMES[0], action: Action): TTheme {
